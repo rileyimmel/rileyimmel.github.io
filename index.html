@@ -1,102 +1,298 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
 
-<style>
-    .works-cited {
-        /*font-family: Arial, sans-serif;*/
-        font-size: 12pt;
-        margin-left: 20px;
-    }
-    .citation {
-        text-indent: -0.5in;
-        margin-left: 0.5in;
-        margin-bottom: 10px;
-    }
+		<title>Lavish - Free Responsive Template</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="author" content="templatemo">
+        <!-- 
+        Lavish HTML CSS Template
+        https://templatemo.com/tm-458-lavish
+        -->
+        
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .image {
-        position: relative;
-        /* Other styling for your image container */
-    }
-
-    .image-overlay {
-        position: absolute; /* Changed from 'center' to 'absolute' */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 1s;
-        display: flex; /* Add flex display */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        pointer-events: none; /* Updated to 'none' to allow clicking on the image */
-    }
-
-    .image:hover .image-overlay {
-        opacity: 1;
-    }
-
-    .image-overlay p {
-        color: white;
-        font-size: 30px;
-        padding: 20px;
-        margin: 0; /* Add this to ensure p tag has no default margin */
-    }
-</style>
-<html>
-<head>
-    <title>Home</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-
-<!-- Wrapper -->
-<div id="wrapper" class="divided">
-
-    <section class="spotlight style1 orient-right content-align-left image-position-center" id="uguide">
-        <div class="content">
-            <ul class="actions small">
-                <li><a href="/mystuff" class="button small wide smooth-scroll-middle">My Stuff</a></li>
-                <li><a href="/bb" class="button small wide smooth-scroll-middle">Breaking Bad Project</a></li>
-            </ul>
-        </div>
-    </section>
+		<!-- animate -->
+		<link rel="stylesheet" href="static/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="static/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="static/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- fullpage -->
+		<link rel="stylesheet" href="static/jquery.fullPage.css">
+		<!-- custom -->
+		<link rel="stylesheet" href="static/templatemo-style.css">
 
 
+	</head>
+	<body>
+	<div id="fullpage">
 
+		<!-- start home -->
+		<div id="home" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+						<h3>Hi! I'm Riley Immel!</h3>
+						<p >I'm a third-year student at <br>the University of Virginia studying Computer Science</p>
+						<a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">More About Me</a>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end home -->
 
+		<!-- start work -->
+		<div id="work" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow bounce">
+						<h2>Interests and Involvement</h2>
+					</div>
+                </div>  
+                
+                <div class="row">
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<a onclick = "window.open('https://uvacns.com/');">
+									<img src="static/cns.png" alt="cns" class="fa fa-laptop">
+								</a>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">President of the Computer & Network Security Club @ UVA</h3>
+								<ul>
+									<li>
+										Oversee the executive board
+									</li>
+									<li>
+										Lead semesterly planning and recruitment strategy
+										<ul>
+											<li>
+												Grew active member body from ~10 to ~40 in one semester
+											</li>
+										</ul>
+									</li>
+									<li>
+										Delegate officer responsibilities
+									</li>
+									<li>
+										Run weekly meetings
+									</li>
+									<li>
+										Rewrote the constitution
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<a onclick = "window.open('https://outdoorsatuva.org/');">
+									<img src="static/odclogo.jpg" alt="cns" class="fa fa-laptop">
+								</a>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Outdoors Club Trip Leader & Member</h3>
+								<ul>
+									<li>
+										Trip Leader since F22
+									</li>
+									<li>
+										Lead backpacking and hiking trips
+									</li>
+									<li>
+										Member since F21
+									</li>
+									<li>
+										Attended over 40 club trips
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<a onclick = "window.open('https://nasouth22d1.kattis.com/contests/nasouth22d1/standings?filter=4984');">
+									<img src="static/icpc.png" alt="cns" class="fa fa-laptop">
+								</a>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Competed at ICPC Mid-Atlantic Region Spring '23</h3>
+								<ul>
+									<li>
+										Competed as part of team Max Flo, teams of 3
+									</li>
+									<li>
+										Practiced F22 & S23 semesters
+									</li>
+									<li>
+										Competed S23 @ Virginia Tech site
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+		<!-- end work -->
 
+		<!-- start about -->
+		<div id="about" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+						<h2>About Me</h2>
+						<h4>Technical Stuff</h4>
+						<p>I'm interested in software engineering/development, web development, cybersecurity, compilers, film photography, and the outdoors!</p>
+						<p>I first learned about web development in S23 when I built a web app for my course project. While I don't have a lot of experience in web dev., I've come to like the backend work quite a lot and am actively expanding my knowledge as much as possible including currently taking a class titled Programming Languages for Web Apps!</p>
+						<p>I love writing programs to solve problems or make parts of my life more efficient. I find DSA problems (Kattis/ICPC) to be challenging yet fun and put my knowledge of a language and theory to the test. Through these problems, I've taught myself C++ and Python, expanded my Java knowledge, and put the theory I learned in Algorithms to work.</p>
+<!--						<a href="#work" class="btn btn-default smoothScroll wow fadeInUp animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">More About Me</a>-->
+							<a href="/static/resume.pdf" target="_blank" class="btn btn-default smoothScroll wow fadeInUp animated" data-wow-delay="1s " style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">My Resume</a>
+					</div>
+					<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+						<h4>Extracurricular Stuff</h4>
+						<p>I'm also a big fan of the outdoors! I grew up in a small town in Connecticut and during high school and through college, I would spend my summers running away to New Hampshire as often as I could.</p>
+						<p>Coming to UVA, I found a home in the Outdoors Club. Here I began to develop my immense love for backpacking and have gone on many multi-day trips in VA and WV. I hope to become an officer of the club in S24, specifically the webmaster. In this position, I'd hope to execute multiple ideas I have on how to improve the club website to make the user experience as great as it can be!</p>
+						<p>The first club I joined at UVA was the Computer and Network Security club when I had no knowledge of cybersecurity. I attended every meeting I possibly could and not even 2 short years later, I had the chance to take over as President! While I still have so much to learn, I'm focusing hard on lowering the barrier to entry and bringing in as many beginners as possible!</p>
+<!--						<span class="text-top">Web Design <small>95%</small></span>-->
+<!--							<div class="progress">-->
+<!--								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>-->
+<!--							</div>-->
+<!--						<span>Mobile Apps <small>80%</small></span>-->
+<!--							<div class="progress">-->
+<!--								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>-->
+<!--							</div>-->
+<!--						<span>SEO Stuffs <small>70%</small></span>-->
+<!--							<div class="progress">-->
+<!--								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>-->
+<!--							</div>-->
+<!--						<span>HTLM5 &AMP; CSS3 <small>90%</small></span>-->
+<!--							<div class="progress">-->
+<!--								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>-->
+<!--							</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
 
+		<!-- start portfolio -->
+		<div id="portfolio" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="wow bounce">PORTFOLIO</h2>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+<!--						<img src="static/portfolio-img1.jpg" class="img-responsive" alt="portfolio img">-->
+<!--							<div class="portfolio-overlay">-->
+<!--								<h4>Web Design</h4>-->
+<!--								<h5>Author: Cindy</h5>-->
+<!--							</div>-->
+					</div>
+				</div>
+				<a href="/bb">
+					<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+						<div class="portfolio-thumb">
+							<img src="bb/images/bb/hehasitall.png" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>Project for Breaking Bad Class</h4>
+								<h5>An essay turned into a website</h5>
+							</div>
+						</div>
+					</div>
+				</a>
+<!--				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">-->
+<!--					<div class="portfolio-thumb">-->
+<!--						<img src="static/portfolio-img2.jpg" class="img-responsive" alt="portfolio img">-->
+<!--							<div class="portfolio-overlay">-->
+<!--								<h4>Transfer Credit Course Project</h4>-->
+<!--								<h5>Authors: Riley, Andrew, Ben, Lance, Xuhao</h5>-->
+<!--							</div>-->
+<!--					</div>-->
+<!--				</div>-->
+			</div>
+		</div>
+	</div>
+	<!-- end portfolio -->
 
+		<!-- start contact -->
+		<div id="contact" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<address>
+							<p class="contact-title">CONTACT ME</p>
+							<p><i class="fa fa-phone"></i> 203-400-3997</p>
+							<p><i class="fa fa-envelope-o"></i> immel@virginia.edu</p>
+						</address>
+					</div>
+<!--					<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">-->
+<!--						<form role="form" method="post" action="#">-->
+<!--							<input name="name" type="text" class="form-control" id="name" placeholder="Your Name">-->
+<!--							<input name="email" type="email" class="form-control" id="email" placeholder="Your Email">-->
+<!--							<textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message"></textarea>-->
+<!--							<input name="send" type="submit" class="form-control" id="send" value="SEND ME">-->
+<!--						</form>-->
+<!--					</div>-->
+					<div class="col-md-1 col-sm-1"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end contact -->
 
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
+						<p>Copyright &copy; 2018 Lavish Personal Profile 
+                        
+                        . Designed by <a rel="nofollow noopener" href="https://templatemo.com">templatemo</a></p>
+						<hr>
+						<ul class="social-icon">
+							<li><a href="https://github.com/rileyimmel" class="fa fa-github"></a></li>
+							<li><a href="https://www.linkedin.com/in/rileyimmel/" class="fa fa-linkedin-square"></a></li>
+							<li><a href="https://www.instagram.com/rileyimmel/" class="fa fa-instagram"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
 
-    <!-- Footer -->
-    <footer class="wrapper style1 align-center">
-        <div class="inner">
-<!--            <ul class="actions small" style="justify-content: center">-->
-<!--                <li><a href="#top" class="button small wide smooth-scroll-middle">Back to the top</a></li>-->
-<!--            </ul>-->
-            <p>&copy; Riley Immel 2023. Design: <a href="https://html5up.net">HTML5 UP</a></p>
-        </div>
-    </footer>
-</div>
+	</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+		<!-- jQuery -->
+		<script src="static/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="static/bootstrap.min.js"></script>
+		<!-- fullpage -->
+		<script src="static/jquery.fullPage.js"></script>
+		<!-- smoothScroll -->
+		<script src="static/smoothscroll.js"></script>
+		<!-- wow -->
+		<script src="static/wow.min.js"></script>
+		<!-- text rotater -->
+		<script src="static/jquery.simple-text-rotator.js"></script>
+		<!-- custom -->
+		<script src="static/custom.js"></script>
 
-</body>
+	</body>
 </html>
