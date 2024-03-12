@@ -1,0 +1,163 @@
+@primary-color: #90f484;
+@dark-gray: #26292c;
+
+.rounded-corners() {
+  border-radius: 20px;
+}
+
+.less-btn {
+  color: @primary-color;
+  .rounded-corners();
+}
+
+.carousel-rounded {
+  .rounded-corners();
+  box-shadow: -10px 10px darken(@primary-color, 60%);
+}
+
+.rounded {
+  .rounded-corners();
+}
+
+
+.hr-big {
+  height: 10px;
+  border: none;
+  color: darken(@primary-color, 40%);
+  background-color: darken(@primary-color, 40%);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.hidden-text {
+  color: #212529;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: inline;
+  text-align: center;
+
+  .navbar-brand {
+    color: @primary-color;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      margin: 0;
+      white-space: nowrap;
+      a {
+        color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        color: #fff;
+      }
+    }
+  }
+
+  .navbar-item {
+    z-index: 1;
+  }
+  .navbar-item-right {
+    z-index: 1;
+  }
+
+  .navbar-current {
+    background-color: darken(@primary-color, 60%);
+    opacity: 60%;
+  }
+}
+
+.filter {
+  border-right: 10px solid #244828;
+  border-bottom: 10px solid #244828;
+  padding-top: 0;
+  margin-top: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.title {
+  display: inline;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  float: left;
+}
+
+.find-card {
+  display: flex;
+  overflow-wrap: normal
+}
+
+.image-card {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// Event responsive
+
+.img-custom {
+
+}
+
+.img-custom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+a:focus {
+  background-color: darken(@primary-color, 50%);
+  transition: opacity 0s ease;
+}

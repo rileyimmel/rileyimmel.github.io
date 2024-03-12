@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Riley Immel">
+    <meta name="description" content="Home | Outdoorsy">
+    <!--    <meta name="keywords" content="Mountains, Hike, Hiking, Peaks, Elevation, Mt. Washington">-->
+
+    <meta property="og:title" content="Outdoorsy">
+    <meta property="og:type" content="website">
+    <!--    <meta property="og:image" content="https://cs4640.cs.virginia.edu/ypq8st/sprint2/memoosilauke.jpg">-->
+    <meta property="og:url" content="https://cs4640.cs.virginia.edu/ypq8st/sprint2/">
+    <meta property="og:description" content="Home | Outdoorsy Sprint 2">
+    <meta property="og:site_name" content="CS4640 Sprint2">
+    <title>Riley Immel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="assets/css/custom.less">
+    <link rel="icon" href="https://cs4640.cs.virginia.edu/ypq8st/sprint2/memoosilauke.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <!--  used bootstrap for most of the page; all elements and no wholesale examples; credit to bootstrap for elements, css, etc.
+ https://getbootstrap.com/ -->
+
+    <!--    urls are:
+            https://cs4640.cs.virginia.edu/ypq8st/sprint2
+            https://cs4640.cs.virginia.edu/ypq8st/sprint2/findTrips.html
+            https://cs4640.cs.virginia.edu/ypq8st/sprint2/recommendations.html
+            https://cs4640.cs.virginia.edu/ypq8st/sprint2/profile.html
+            https://cs4640.cs.virginia.edu/ypq8st/sprint2/addActivity.html
+    -->
+</head>
+
+<body style="overflow: hidden">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-4" style="padding-left: 10px">
+            <div class="container">
+                <div class="rounded-3">
+                    <div>
+                        <img src="static/mtnhouse.jpg" class="img-fluid rounded-3" alt="film photo of me">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-4">
+            <div class="vertical-center">
+                <div>
+                    <div class="container">
+                        <h3>Hi, I'm Riley Immel!</h3>
+                        <h5>I'm a third-year student at the University of Virginia studying Computer Science</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none d-sm-inline">
+            <div style="text-align: center">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="education" data-target="#educationDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="education">Education</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="projects" data-target="#projectsDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="projects">Projects</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="skills" data-target="#skillsDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="skills">Skills</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="work" data-target="#workDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="work">Work Experience</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="activities" data-target="#activitiesDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="activities">Activities</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="photos" data-target="#photosDiv" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="photos">Photos</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown for small screens -->
+        <div class="dropdown d-sm-none">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Option
+            </button>
+            <ul class="dropdown-menu">
+                <li><label class="dropdown-item" for="education">Education</label></li>
+                <li><label class="dropdown-item" for="projects">Projects</label></li>
+                <li><label class="dropdown-item" for="skills">Skills</label></li>
+                <li><label class="dropdown-item" for="work">Work Experience</label></li>
+                <li><label class="dropdown-item" for="activities">Activities</label></li>
+                <li><label class="dropdown-item" for="photos">Photos</label></li>
+            </ul>
+        </div>
+
+
+        <div class="row">
+            <div class="container" style="display: none" id="educationDiv">
+                <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                    <div style="padding-left: 20px">
+                        <h1>University of Virginia School of Engineering</h1>
+                        <h5>Charlottesville, Virginia</h5>
+                        <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                        <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
+                        <h4>Coursework</h4>
+                        <div style="text-align: left; display: inline">
+                            <ul>
+                                <li><h5>Advanced Software Development</h5></li>
+                                <li><h5>Programming Languages for Web Applications</h5></li>
+                                <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
+                                <li><h5>Data Structures and Algorithms I & II</h5></li>
+                                <li><h5>Compilers</h5></li>
+                                <li><h5>Computer Systems and Organization I & II</h5></li>
+                                <li><h5>Theory of Computation</h5></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container" style="display: none" id="projectsDiv">
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div style="padding-left: 20px">
+                    <div class="card" style="width: 18rem;">
+                        <img src="static/odclogo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" style="display: none" id="skillsDiv">
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div style="padding-left: 20px">
+                    <h1>Skills</h1>
+                    <h5>Charlottesville, Virginia</h5>
+                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
+                    <h4>Coursework</h4>
+                    <div style="text-align: left; display: inline">
+                        <ul>
+                            <li><h5>Advanced Software Development</h5></li>
+                            <li><h5>Programming Languages for Web Applications</h5></li>
+                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
+                            <li><h5>Data Structures and Algorithms I & II</h5></li>
+                            <li><h5>Compilers</h5></li>
+                            <li><h5>Computer Systems and Organization I & II</h5></li>
+                            <li><h5>Theory of Computation</h5></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" style="display: none" id="workDiv">
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div style="padding-left: 20px">
+                    <h1>Work Experience</h1>
+                    <h5>Charlottesville, Virginia</h5>
+                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
+                    <h4>Coursework</h4>
+                    <div style="text-align: left; display: inline">
+                        <ul>
+                            <li><h5>Advanced Software Development</h5></li>
+                            <li><h5>Programming Languages for Web Applications</h5></li>
+                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
+                            <li><h5>Data Structures and Algorithms I & II</h5></li>
+                            <li><h5>Compilers</h5></li>
+                            <li><h5>Computer Systems and Organization I & II</h5></li>
+                            <li><h5>Theory of Computation</h5></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" style="display: none" id="activitiesDiv">
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div style="padding-left: 20px">
+                    <h1>Activities</h1>
+                    <h5>Charlottesville, Virginia</h5>
+                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
+                    <h4>Coursework</h4>
+                    <div style="text-align: left; display: inline">
+                        <ul>
+                            <li><h5>Advanced Software Development</h5></li>
+                            <li><h5>Programming Languages for Web Applications</h5></li>
+                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
+                            <li><h5>Data Structures and Algorithms I & II</h5></li>
+                            <li><h5>Compilers</h5></li>
+                            <li><h5>Computer Systems and Organization I & II</h5></li>
+                            <li><h5>Theory of Computation</h5></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" style="display: none" id="photosDiv">
+            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div style="padding-left: 20px">
+                    <h1>Photos</h1>
+                    <h5>Charlottesville, Virginia</h5>
+                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
+                    <h4>Coursework</h4>
+                    <div style="text-align: left; display: inline">
+                        <ul>
+                            <li><h5>Advanced Software Development</h5></li>
+                            <li><h5>Programming Languages for Web Applications</h5></li>
+                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
+                            <li><h5>Data Structures and Algorithms I & II</h5></li>
+                            <li><h5>Compilers</h5></li>
+                            <li><h5>Computer Systems and Organization I & II</h5></li>
+                            <li><h5>Theory of Computation</h5></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.btn-check').change(function() {
+                var targetDiv = $(this).data('target');
+                $('[id$="Div"]').hide();
+                $(targetDiv).show();
+            });
+        });
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
