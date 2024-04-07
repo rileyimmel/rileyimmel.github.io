@@ -1,41 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="author" content="Riley Immel">
-    <meta name="description" content="Home | Outdoorsy">
-    <!--    <meta name="keywords" content="Mountains, Hike, Hiking, Peaks, Elevation, Mt. Washington">-->
-
-    <meta property="og:title" content="Outdoorsy">
-    <meta property="og:type" content="website">
-    <!--    <meta property="og:image" content="https://cs4640.cs.virginia.edu/ypq8st/sprint2/memoosilauke.jpg">-->
-    <meta property="og:url" content="https://cs4640.cs.virginia.edu/ypq8st/sprint2/">
-    <meta property="og:description" content="Home | Outdoorsy Sprint 2">
-    <meta property="og:site_name" content="CS4640 Sprint2">
     <title>Riley Immel</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet/less" type="text/css" href="assets/css/custom.less">
-    <link rel="icon" href="https://cs4640.cs.virginia.edu/ypq8st/sprint2/memoosilauke.jpg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-    <!--  used bootstrap for most of the page; all elements and no wholesale examples; credit to bootstrap for elements, css, etc.
- https://getbootstrap.com/ -->
-
-    <!--    urls are:
-            https://cs4640.cs.virginia.edu/ypq8st/sprint2
-            https://cs4640.cs.virginia.edu/ypq8st/sprint2/findTrips.html
-            https://cs4640.cs.virginia.edu/ypq8st/sprint2/recommendations.html
-            https://cs4640.cs.virginia.edu/ypq8st/sprint2/profile.html
-            https://cs4640.cs.virginia.edu/ypq8st/sprint2/addActivity.html
-    -->
 </head>
 
-<body style="overflow: hidden">
+<body style="padding-left: 15px; overflow-x: hidden; margin-bottom: 50px" >
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-4" style="padding-left: 10px">
             <div class="container">
@@ -58,30 +35,31 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none d-sm-inline">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none d-sm-inline" style="width: 100%">
             <div style="text-align: center">
                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="btnradio" id="education" data-target="#educationDiv" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="education">Education</label>
+                    <input type="radio" class="btn-check" name="btnradio" id="education" autocomplete="off" checked="checked" onclick="showOuter('educationDiv');">
+                    <label class="btn checked btn-outline-secondary" for="education">Education</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="projects" data-target="#projectsDiv" autocomplete="off">
+                    <input type="radio" class="btn-check" name="btnradio" id="projects" autocomplete="off" onclick="showOuter('projectsDiv');">
                     <label class="btn btn-outline-secondary" for="projects">Projects</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="skills" data-target="#skillsDiv" autocomplete="off">
+                    <input type="radio" class="btn-check" name="btnradio" id="skills" autocomplete="off" onclick="showOuter('skillsDiv');">
                     <label class="btn btn-outline-secondary" for="skills">Skills</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="work" data-target="#workDiv" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="work">Work Experience</label>
+<!--                    <input type="radio" class="btn-check" name="btnradio" id="work" autocomplete="off" onclick="showOuter('workDiv');">-->
+<!--                    <label class="btn btn-outline-secondary" for="work">Work Experience</label>-->
 
-                    <input type="radio" class="btn-check" name="btnradio" id="activities" data-target="#activitiesDiv" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="activities">Activities</label>
-
-                    <input type="radio" class="btn-check" name="btnradio" id="photos" data-target="#photosDiv" autocomplete="off">
+                    <input type="radio" class="btn-check" name="btnradio" id="photos" autocomplete="off" onclick="showOuter('photosDiv');">
                     <label class="btn btn-outline-secondary" for="photos">Photos</label>
+
+                    <a class="btn btn-outline-secondary" href="static/resume.pdf" target="_blank">
+                        <input type="radio" class="btn-check" name="btnradio" id="resume" autocomplete="off">Resume
+                        <label for="resume"></label>
+                    </a>
                 </div>
             </div>
         </div>
-
         <!-- Dropdown for small screens -->
         <div class="dropdown d-sm-none">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,161 +69,444 @@
                 <li><label class="dropdown-item" for="education">Education</label></li>
                 <li><label class="dropdown-item" for="projects">Projects</label></li>
                 <li><label class="dropdown-item" for="skills">Skills</label></li>
-                <li><label class="dropdown-item" for="work">Work Experience</label></li>
-                <li><label class="dropdown-item" for="activities">Activities</label></li>
+<!--                <li><label class="dropdown-item" for="work">Work Experience</label></li>-->
                 <li><label class="dropdown-item" for="photos">Photos</label></li>
             </ul>
         </div>
-
-
-        <div class="row">
-            <div class="container" style="display: none" id="educationDiv">
-                <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
-                    <div style="padding-left: 20px">
-                        <h1>University of Virginia School of Engineering</h1>
-                        <h5>Charlottesville, Virginia</h5>
-                        <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
-                        <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
-                        <h4>Coursework</h4>
-                        <div style="text-align: left; display: inline">
-                            <ul>
-                                <li><h5>Advanced Software Development</h5></li>
-                                <li><h5>Programming Languages for Web Applications</h5></li>
-                                <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
-                                <li><h5>Data Structures and Algorithms I & II</h5></li>
-                                <li><h5>Compilers</h5></li>
-                                <li><h5>Computer Systems and Organization I & II</h5></li>
-                                <li><h5>Theory of Computation</h5></li>
-                            </ul>
+        <div id="educationDiv">
+            <div style="display: flex; justify-content: center; padding-top: 20px; padding-right: 25px; padding-bottom: 100px">
+                <div class="p-5 text-center bg-body-tertiary rounded-3" style="max-width: 100%;">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <div style="margin-right: 20px;">
+                            <img src="static/sabre.png" alt="seas" style="height: 100px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <h1 class="text-body-emphasis" style="margin-bottom: 0;">University of Virginia</h1>
+                            <h2 style="margin-top: 0;">School of Engineering and Applied Science</h2>
                         </div>
                     </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio2" id="degreeInfo" autocomplete="off" checked="checked" onclick="showInner('degreeInfoDiv');">
+                            <label class="btn btn-outline-secondary" for="degreeInfo">Degree Info</label>
 
+                            <input type="radio" class="btn-check" name="btnradio2" id="courses" autocomplete="off" onclick="showInner('coursesDiv');">
+                            <label class="btn btn-outline-secondary" for="courses">Courses</label>
+
+                            <input type="radio" class="btn-check" name="btnradio2" id="activities" autocomplete="off" onclick="showInner('activitiesDiv');">
+                            <label class="btn btn-outline-secondary" for="activities">Activities</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container" id="degreeInfoDiv">
+                            <div style="padding-top: 20px;">
+                                <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
+                                <h2>Master of Computer Science, May 2026</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container" style="display: none;" id="coursesDiv">
+                            <div style="padding-top: 20px;">
+                                <div style="text-align: left; display: inline">
+                                    <ul>
+                                        <li><h5>Advanced Software Development <a href="https://s23.cs3240.org/" target="_blank">Website</a> <a href="static/cs3240syllabus.pdf" target="_blank">Syllabus</a></h5></li>
+                                        <li><h5>Programming Languages for Web Applications <a href="https://cs4640.cs.virginia.edu/" target="_blank">Website</a> <a href="static/cs4640syllabus.pdf" target="_blank">Syllabus</a></h5></li>
+                                        <li><h5>Programming Languages (focusing on design and implementation of languages) <a href="static/cs3240syllabus.pdf" target="_blank">Syllabus</a></h5></li>
+                                        <li><h5>Data Structures and Algorithms I & II</h5></li>
+                                        <li><h5>Compilers <a href="static/cs4620syllabus.pdf" target="_blank">Syllabus</a></h5></li>
+                                        <li><h5>Computer Systems and Organization I & II <a href="https://www.cs.virginia.edu/~cr4bd/3130/S2023/" target="_blank">CSO2 Website</a> <a href="static/cs3130syllabus.pdf" target="_blank">CSO2 Syllabus</a> <a href="https://www.cs.virginia.edu/~jh2jf/courses/cs2130/fall2022/" target="_blank">CSO1 Website</a></h5></li>
+                                        <li><h5>Theory of Computation <a href="https://markfloryan.github.io/dmt2/readme.html" target="_blank">Website</a></h5></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container" style="display: none;" id="activitiesDiv">
+                            <div style="padding-top: 20px;">
+                                <div style="text-align: left; display: inline">
+                                    <h2>
+                                        <a href="https://uvacns.com/" target="_blank" style="text-decoration: none">
+                                            <img src="static/cns.png" alt="CNS Logo" style="height: 60px; margin-right: 10px;" class="cns-rounded">
+                                        </a>
+                                        <b>Computer and Network Security Club</b>
+                                    </h2>
+                                    <h4>President <small><i>Spring 2023 - Current</i></small> Member <small><i>Fall 2021 - Current</i></small></h4>
+                                    <ul>
+                                        <li>
+                                            <h5>
+                                                Oversee executive board and delegate officer responsibilities, ensure club mission is achieved, aid in
+                                                running self-written and hosted competition and get sponsors
+                                            </h5>
+                                        </li>
+                                        <li>
+                                            <h5>
+                                                Lead the planning of semester’s events, competitions, and spearhead recruitment efforts
+                                            </h5>
+                                            <ul>
+                                                <li>
+                                                    <h5>
+                                                        Grew club membership from 10 to 40 and f/m ratio from 0/100 to 40/60 in 1 semester
+                                                    </h5>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="https://outdoorsatuva.org/" target="_blank" style="text-decoration: none">
+                                            <img src="static/odclogo.jpg" alt="Outdoors Club Logo" style="height: 60px; margin-right: 10px;" class="odc-rounded">
+                                        </a>
+                                        <b>Outdoors Club</b>
+                                    </h2>
+                                    <h4>Trip Leader <small><i>Fall 2022 - Current</i></small> Member <small><i>Fall 2021 - Current</i></small></h4>
+                                    <ul>
+                                        <li>
+                                            <h5>
+                                                Lead and plan club trips including overnight and beginner focused for hiking and backpacking
+                                            </h5>
+                                        </li>
+                                    </ul>
+                                    <h2>
+                                        <a href="https://nasouth22d1.kattis.com/contests/nasouth22d1/standings?filter=4984" target="_blank" style="text-decoration: none">
+                                            <img src="static/icpc.png" alt="ICPC image" style="height: 60px; margin-right: 10px;" class="icpc-rounded">
+                                        </a>
+                                        <b>International Collegiate Programming Contest</b> Mid-Atlantic Region
+                                    </h2>
+                                    <h4><small><i>Fall 2022 - Spring 2023</i></small></h4>
+                                    <ul>
+                                        <li>
+                                            <h5>
+                                                Problem-solving competition focused on using algorithms; utilized C++, Python, Java, and algo theory
+                                            </h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="container" style="display: none" id="projectsDiv">
-            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
-                <div style="padding-left: 20px">
-                    <div class="card" style="width: 18rem;">
-                        <img src="static/odclogo.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row" style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div style="height: 300px">
+                        <a data-bs-toggle="modal" data-bs-target="#sipcmodal">
+                            <div class="card">
+                                <img src="static/compiler.jpg" class="card-img-top" alt="Compilers Project">
+                                <div class="card-body">
+                                    <h5 class="card-title">SIPC Project</h5>
+                                    <p class="card-text">Class project extending a compiler utilizing C++ and CMAKE</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div style="height: 300px">
+                        <a data-bs-toggle="modal" data-bs-target="#transfermodal">
+                            <div class="card">
+                                <img src="static/transfer.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Transfer Guide</h5>
+                                    <p class="card-text">Class project building web app using Django, Python, and Heroku</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div style="height: 300px">
+                        <a data-bs-toggle="modal" data-bs-target="#plwaModal">
+                            <div class="card">
+                                <img src="static/plwa.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Web Apps Sites</h5>
+                                    <p class="card-text">Semester Long Website and Homework sites built using PHP, mySQL, HTML, and CSS/LESS</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div style="height: 300px">
+                        <a data-bs-toggle="modal" data-bs-target="#bbModal">
+                            <div class="card">
+                                <img src="static/images/bb/hehasitall.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Breaking Bad</h5>
+                                    <p class="card-text">Website submitted for final project for Media Studies class on Breaking Bad. Final paper in website form</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="sipcmodal" tabindex="-1" aria-labelledby="sipcmodal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="sipcmodallabel">SIPC Project</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>• Extended a Tiny Imperative Programming language compiler front-to-back utilizing C++, CMAKE, and Git to flesh out the language with features like arrays, relational operators, etc.</p>
+                            <p>• Semester long partner project with biweekly sprints</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-primary" href="https://github.com/rileyimmel/Compilers-Project/tree/main" target="_blank">Github</a>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <div class="container" style="display: none" id="skillsDiv">
-            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
-                <div style="padding-left: 20px">
-                    <h1>Skills</h1>
-                    <h5>Charlottesville, Virginia</h5>
-                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
-                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
-                    <h4>Coursework</h4>
-                    <div style="text-align: left; display: inline">
-                        <ul>
-                            <li><h5>Advanced Software Development</h5></li>
-                            <li><h5>Programming Languages for Web Applications</h5></li>
-                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
-                            <li><h5>Data Structures and Algorithms I & II</h5></li>
-                            <li><h5>Compilers</h5></li>
-                            <li><h5>Computer Systems and Organization I & II</h5></li>
-                            <li><h5>Theory of Computation</h5></li>
-                        </ul>
+            <div class="modal fade" id="transfermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="transfermodallabel">Transfer Project</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>• Scrum Manager of a team of 5 in a semester long, biweekly sprint project building a web application for listing
+                                transfer course equivalents</p>
+                            <p>• Utilized Django framework, Heroku hosting, Python, and MySQL for development</p>
+                            <p>• Learned full-stack development due to lack of team help and needing to make up their work; received
+                                extra points from professor</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-primary" href="https://github.com/rileyimmel/TransferGuideCS3240Backup" target="_blank">Github</a>
+                        </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="modal fade" id="plwaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="plwamodallabel">Web Apps Sites</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>• Semester-long project done solo building a website using PHP and MySQL</p>
+                            <p>• Sites built for homework; each focused on a specific technology (CSS, PHP, MySQL, etc.)</p>
+                            <p>• Follow the link to the Apache directory of all hosted HWs and sprints of my project</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-primary" href="https://cs4640.cs.virginia.edu/ypq8st/" target="_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="bbModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="bbModalLabel">Web Apps Sites</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>• Display final paper in a different format</p>
+                            <p>• Built using simple HTML and CSS</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a type="button" class="btn btn-primary" href="/bb/" target="_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div id="skillsDiv" style="display: none">
+            <div style="display: flex; justify-content: center; padding-top: 20px; padding-right: 25px; padding-bottom: 100px">
+                <div class="p-5 text-center bg-body-tertiary rounded-3" style="max-width: 100%;">
+                    <div class="container">
+                        <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
+                            <div style="padding-left: 20px">
+                                <table class="table table-bordered" style="text-align: left">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col" style="background: #2B3035">Skill</th>
+                                        <th scope="col" style="background: #2B3035">Project(s)</th>
+                                        <th scope="col" style="background: #2B3035">Class(es)</th>
+                                        <th scope="col" style="background: #2B3035">Other</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">C++</th>
+                                        <td style="background: #2B3035">SIPC</td>
+                                        <td style="background: #2B3035">Compilers</td>
+                                        <td style="background: #2B3035">ICPC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">C</th>
+                                        <td style="background: #2B3035"></td>
+                                        <td style="background: #2B3035">Computer Systems & Organization</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Java</th>
+                                        <td style="background: #2B3035"></td>
+                                        <td style="background: #2B3035">Data Structures & Algorithms</td>
+                                        <td style="background: #2B3035">ICPC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Python</th>
+                                        <td style="background: #2B3035">Transfer Guide</td>
+                                        <td style="background: #2B3035">Advanced Software Development, Data Structures & Algorithms</td>
+                                        <td style="background: #2B3035">ICPC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">PHP</th>
+                                        <td style="background: #2B3035">Web Apps</td>
+                                        <td style="background: #2B3035">PL for Web Apps</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Javascript</th>
+                                        <td style="background: #2B3035">Web Apps, Transfer Guide</td>
+                                        <td style="background: #2B3035">PL for Web Apps</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">jQuery</th>
+                                        <td style="background: #2B3035">Web Apps, Transfer Guide</td>
+                                        <td style="background: #2B3035">PL for Web Apps</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">AJAX</th>
+                                        <td style="background: #2B3035">Web Apps</td>
+                                        <td style="background: #2B3035">PL for Web Apps</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Django</th>
+                                        <td style="background: #2B3035">Transfer Guide</td>
+                                        <td style="background: #2B3035">Advanced Software Development</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">HTML</th>
+                                        <td style="background: #2B3035">Web Apps, Transfer Guide</td>
+                                        <td style="background: #2B3035">PL for Web Apps, Advanced Software Development</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">CSS</th>
+                                        <td style="background: #2B3035">Web Apps, Transfer Guide</td>
+                                        <td style="background: #2B3035">PL for Web Apps, Advanced Software Development</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Git/Github</th>
+                                        <td style="background: #2B3035">Web Apps, Transfer Guide, SIPC</td>
+                                        <td style="background: #2B3035">All classes (Too many to list)</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">PostgreSQL</th>
+                                        <td style="background: #2B3035">Web Apps</td>
+                                        <td style="background: #2B3035">PL for Web Apps</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">MySQL</th>
+                                        <td style="background: #2B3035">Transfer Guide</td>
+                                        <td style="background: #2B3035">Advanced Software Development</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Heroku</th>
+                                        <td style="background: #2B3035">Transfer Guide</td>
+                                        <td style="background: #2B3035">Advanced Software Development</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Algorithms</th>
+                                        <td style="background: #2B3035"></td>
+                                        <td style="background: #2B3035">Data Structures & Algorithms, Theory of Computation, Programming Languages</td>
+                                        <td style="background: #2B3035">ICPC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" style="background: #2B3035">Linux</th>
+                                        <td style="background: #2B3035">Web Apps, SIPC, Transfer Guide</td>
+                                        <td style="background: #2B3035">Most Classes</td>
+                                        <td style="background: #2B3035"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container" style="display: none" id="workDiv">
-            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
-                <div style="padding-left: 20px">
-                    <h1>Work Experience</h1>
-                    <h5>Charlottesville, Virginia</h5>
-                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
-                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
-                    <h4>Coursework</h4>
-                    <div style="text-align: left; display: inline">
-                        <ul>
-                            <li><h5>Advanced Software Development</h5></li>
-                            <li><h5>Programming Languages for Web Applications</h5></li>
-                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
-                            <li><h5>Data Structures and Algorithms I & II</h5></li>
-                            <li><h5>Compilers</h5></li>
-                            <li><h5>Computer Systems and Organization I & II</h5></li>
-                            <li><h5>Theory of Computation</h5></li>
-                        </ul>
-                    </div>
-                </div>
+<!--            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">-->
+<!--                <div style="padding-left: 20px">-->
+<!--                    <h1>Work Experience</h1>-->
+<!--                </div>-->
 
-            </div>
-        </div>
-        <div class="container" style="display: none" id="activitiesDiv">
-            <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
-                <div style="padding-left: 20px">
-                    <h1>Activities</h1>
-                    <h5>Charlottesville, Virginia</h5>
-                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
-                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
-                    <h4>Coursework</h4>
-                    <div style="text-align: left; display: inline">
-                        <ul>
-                            <li><h5>Advanced Software Development</h5></li>
-                            <li><h5>Programming Languages for Web Applications</h5></li>
-                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
-                            <li><h5>Data Structures and Algorithms I & II</h5></li>
-                            <li><h5>Compilers</h5></li>
-                            <li><h5>Computer Systems and Organization I & II</h5></li>
-                            <li><h5>Theory of Computation</h5></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
+<!--            </div>-->
         </div>
         <div class="container" style="display: none" id="photosDiv">
             <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px">
                 <div style="padding-left: 20px">
                     <h1>Photos</h1>
-                    <h5>Charlottesville, Virginia</h5>
-                    <h2>Bachelor of Science, Major in Computer Science, May 2025</h2>
-                    <h4><b>GPA</b> 3.78/4.0 <b>CS GPA</b> 3.84/4.0</h4>
-                    <h4>Coursework</h4>
-                    <div style="text-align: left; display: inline">
-                        <ul>
-                            <li><h5>Advanced Software Development</h5></li>
-                            <li><h5>Programming Languages for Web Applications</h5></li>
-                            <li><h5>Programming Languages (focusing on design and implementation of languages)</h5></li>
-                            <li><h5>Data Structures and Algorithms I & II</h5></li>
-                            <li><h5>Compilers</h5></li>
-                            <li><h5>Computer Systems and Organization I & II</h5></li>
-                            <li><h5>Theory of Computation</h5></li>
-                        </ul>
-                    </div>
+                    <h5>To Be Added...</h5>
                 </div>
 
             </div>
         </div>
+
     </div>
 
 
     <script>
-        $(document).ready(function() {
-            $('.btn-check').change(function() {
-                var targetDiv = $(this).data('target');
-                $('[id$="Div"]').hide();
-                $(targetDiv).show();
-            });
-        });
+        var outer = ['educationDiv', 'projectsDiv', 'skillsDiv', 'workDiv', 'photosDiv'];
+        var inner = ['degreeInfoDiv', 'coursesDiv', 'activitiesDiv'];
+        var innerRadios = ['degreeInfo', 'courses', 'activities'];
+
+        function showOuter(id){
+            outer.forEach(hideOuter);
+            document.getElementById(id).style.display ='block';
+            if(id !== 'educationDiv'){
+                inner.forEach(hideInner);
+                innerRadios.forEach(uncheckInner);
+            }
+            if(id === 'educationDiv'){
+                document.getElementById('degreeInfoDiv').style.display ='block';
+                document.getElementById('coursesDiv').style.display ='none';
+                document.getElementById('activitiesDiv').style.display ='none';
+                innerRadios.forEach(uncheckInner);
+                document.getElementById('degreeInfo').checked = true;
+            }
+        }
+
+        function hideOuter(id){
+            document.getElementById(id).style.display ='none';
+        }
+
+        function showInner(id){
+            inner.forEach(hideInner);
+            document.getElementById(id).style.display ='block';
+        }
+
+        function hideInner(id){
+            document.getElementById(id).style.display ='none';
+        }
+
+        function uncheckInner(id){
+            document.getElementById(id).checked = false;
+        }
     </script>
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
